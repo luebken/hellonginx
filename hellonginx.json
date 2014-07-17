@@ -8,7 +8,15 @@
                     "component_name": "hellonginx-component",
                     "image": "luebken/hellonginx",
                     "ports": [ "80/tcp" ],
+                    "dependencies": [
+                        { "name": "weather", "port": 1337 }
+                    ],
                     "domains": { "hellonginx.cluster-matthias-02.giantswarm.io": "80" }
+                },
+                {
+                    "component_name": "weather",
+                    "image": "luebken/currentweather",
+                    "ports": [ "1337/tcp" ]
                 }
             ]
         }
