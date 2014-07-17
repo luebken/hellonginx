@@ -1,0 +1,16 @@
+{
+    "app_name": "hellonginx",
+    "services": [
+        {
+            "service_name": "hellonginx-service",
+            "components": [
+                {
+                    "component_name": "hellonginx-component",
+                    "image": "luebken/hellonginx",
+                    "ports": [ "80/tcp" ],
+                    "domains": { "hellonginx.cluster-matthias-02.giantswarm.io": "80" }
+                }
+            ]
+        }
+    ]
+}
