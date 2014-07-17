@@ -4,6 +4,6 @@ FROM nginx
 
 ADD nginx.conf /etc/
 
-ADD entrypoint.sh /usr/local/nginx/html/
+ADD cmd.sh /usr/local/nginx/html/
 
-CMD ["/bin/bash", "entrypoint.sh"]
+CMD ["/bin/bash", "cmd.sh"]
